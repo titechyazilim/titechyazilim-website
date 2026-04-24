@@ -2,7 +2,7 @@ export const translations = {
   tr: {
     nav: {
       about: "Hakkımızda",
-      products: "Ürünler",
+      products: "Uygulamalarımız",
       contact: "İletişim",
     },
     hero: {
@@ -11,7 +11,7 @@ export const translations = {
       titleLine2: "Geleceği İnşa Ediyoruz",
       description:
         "TITECH YAZILIM olarak, kullanıcıların hayatını kolaylaştıran yenilikçi mobil uygulamalar ve yazılım çözümleri geliştiriyoruz.",
-      cta1: "Ürünlerimizi Keşfet",
+      cta1: "Uygulamalarımızı Keşfet",
       cta2: "İletişime Geç",
     },
     about: {
@@ -28,15 +28,26 @@ export const translations = {
         "Firebase ve bulut tabanlı altyapılar ile güçlü, güvenilir ve ölçeklenebilir backend çözümleri sunuyoruz.",
     },
     products: {
-      title: "Ürünlerimiz",
+      title: "Uygulamalarımız",
       subtitle:
         "Kullanıcıların hayatını kolaylaştıran uygulamalar geliştiriyoruz.",
-      caddedetur: {
-        desc: "Bağdat Caddesi'nde tur atarken beğendiğiniz birine ulaşmak artık çok kolay. CaddedeTur ile yakınlarınızdaki kullanıcıları plakalarından bulun, arkadaşlık isteği gönderin ve güvenle mesajlaşmaya başlayın. Geleneksel cadde kültürünü dijital çağa taşıyoruz.",
-        tag1: "Konum Tabanlı",
-        tag2: "Gerçek Zamanlı",
-        tag3: "Güvenli Mesajlaşma",
-        tag4: "iOS",
+      comingSoon: "Çok Yakında",
+      apps: {
+        caddedetur: {
+          name: "CaddedeTur",
+          desc: "Bağdat Caddesi'nde tur atarken beğendiğiniz birine ulaşmak artık çok kolay. Yakınlarınızdaki kullanıcıları plakalarından bulun, arkadaşlık isteği gönderin ve güvenle mesajlaşmaya başlayın.",
+          tags: ["Konum Tabanlı", "Gerçek Zamanlı", "Güvenli Mesajlaşma", "iOS"],
+        },
+        myzzle: {
+          name: "Myzzle",
+          desc: "Gerçek fotoğraflardan yapay zekâ destekli yapboz. Kendi fotoğrafını yükle, parçalara ayır, çöz. Arkadaşlarınla yarış, puan topla, sıralamada yüksel.",
+          tags: ["Yapbozlar", "AI Destekli", "Sosyal", "iOS"],
+        },
+        boyuyorum: {
+          name: "Boyuyorum",
+          desc: "Çocuklar için eğlenceli ve eğitici dijital boyama uygulaması. Yüzlerce hazır tasarım, canlı renk paleti ve yaratıcı araçlarla hayal gücünü özgür bırak.",
+          tags: ["Çocuklar", "Eğitim", "Yaratıcılık", "iOS"],
+        },
       },
     },
     contact: {
@@ -57,7 +68,7 @@ export const translations = {
   en: {
     nav: {
       about: "About",
-      products: "Products",
+      products: "Our Apps",
       contact: "Contact",
     },
     hero: {
@@ -66,7 +77,7 @@ export const translations = {
       titleLine2: "with Technology",
       description:
         "At TITECH YAZILIM, we develop innovative mobile applications and software solutions that make users' lives easier.",
-      cta1: "Explore Products",
+      cta1: "Explore Our Apps",
       cta2: "Get in Touch",
     },
     about: {
@@ -83,14 +94,25 @@ export const translations = {
         "We provide powerful, reliable, and scalable backend solutions with Firebase and cloud-based infrastructures.",
     },
     products: {
-      title: "Our Products",
+      title: "Our Apps",
       subtitle: "We develop applications that make users' lives easier.",
-      caddedetur: {
-        desc: "Reaching someone you like while cruising on Bağdat Caddesi is now easier than ever. With CaddedeTur, find nearby users by their license plates, send friend requests, and start messaging securely. We're bringing traditional street culture into the digital age.",
-        tag1: "Location-Based",
-        tag2: "Real-Time",
-        tag3: "Secure Messaging",
-        tag4: "iOS",
+      comingSoon: "Coming Soon",
+      apps: {
+        caddedetur: {
+          name: "CaddedeTur",
+          desc: "Reaching someone you like while cruising on Bağdat Caddesi is now easier than ever. Find nearby users by their license plates, send friend requests, and start messaging securely.",
+          tags: ["Location-Based", "Real-Time", "Secure Messaging", "iOS"],
+        },
+        myzzle: {
+          name: "Myzzle",
+          desc: "AI-powered jigsaw puzzles from real photos. Upload your own photo, split it into pieces, and solve. Compete with friends, earn points, climb the leaderboard.",
+          tags: ["Puzzles", "AI Powered", "Social", "iOS"],
+        },
+        boyuyorum: {
+          name: "Boyuyorum",
+          desc: "A fun and educational digital coloring app for kids. Hundreds of ready-made designs, vibrant color palettes, and creative tools to set imagination free.",
+          tags: ["Kids", "Education", "Creativity", "iOS"],
+        },
       },
     },
     contact: {

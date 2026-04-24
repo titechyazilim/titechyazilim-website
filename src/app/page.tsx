@@ -244,41 +244,73 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-[#2257ee]/10 to-[#5b8bff]/5 border border-[#2257ee]/20 overflow-hidden">
-            <div className="absolute top-0 right-0 w-72 h-72 bg-[#2257ee]/10 rounded-full blur-[80px]" />
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-10">
-              <div className="flex-shrink-0">
-                <Image
-                  src="/logo.png"
-                  alt="CaddedeTur"
-                  width={120}
-                  height={120}
-                  className="rounded-3xl shadow-2xl shadow-[#2257ee]/20"
-                />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                  CaddedeTur
-                </h3>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  {t.products.caddedetur.desc}
-                </p>
-                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300">
-                    {t.products.caddedetur.tag1}
-                  </span>
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300">
-                    {t.products.caddedetur.tag2}
-                  </span>
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300">
-                    {t.products.caddedetur.tag3}
-                  </span>
-                  <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300">
-                    {t.products.caddedetur.tag4}
-                  </span>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                key: "caddedetur",
+                logo: "/apps/caddedetur.png",
+                accent: "#2257ee",
+                glow: "from-[#2257ee]/10 to-[#5b8bff]/5",
+                border: "border-[#2257ee]/20",
+                blob: "bg-[#2257ee]/10",
+              },
+              {
+                key: "myzzle",
+                logo: "/apps/myzzle.png",
+                accent: "#D41E3A",
+                glow: "from-[#D41E3A]/10 to-[#FF6B8A]/5",
+                border: "border-[#D41E3A]/20",
+                blob: "bg-[#D41E3A]/10",
+              },
+              {
+                key: "boyuyorum",
+                logo: "/apps/boyuyorum.png",
+                accent: "#FBBC04",
+                glow: "from-[#FBBC04]/10 to-[#FF9F1C]/5",
+                border: "border-[#FBBC04]/25",
+                blob: "bg-[#FBBC04]/10",
+              },
+            ].map((app) => {
+              const data = t.products.apps[app.key as keyof typeof t.products.apps];
+              return (
+                <div
+                  key={app.key}
+                  className={`relative p-7 rounded-3xl bg-gradient-to-br ${app.glow} border ${app.border} overflow-hidden flex flex-col hover:scale-[1.02] transition-transform duration-300`}
+                >
+                  <div
+                    className={`absolute -top-16 -right-16 w-56 h-56 ${app.blob} rounded-full blur-[80px] pointer-events-none`}
+                  />
+                  <div className="relative z-10 flex items-center gap-4 mb-5">
+                    <Image
+                      src={app.logo}
+                      alt={data.name}
+                      width={72}
+                      height={72}
+                      className="rounded-2xl shadow-xl"
+                      style={{
+                        boxShadow: `0 20px 40px -12px ${app.accent}33`,
+                      }}
+                    />
+                    <div>
+                      <h3 className="text-2xl font-bold">{data.name}</h3>
+                    </div>
+                  </div>
+                  <p className="relative z-10 text-gray-300 text-sm leading-relaxed mb-5 flex-1">
+                    {data.desc}
+                  </p>
+                  <div className="relative z-10 flex flex-wrap gap-2">
+                    {data.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
